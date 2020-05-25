@@ -185,18 +185,12 @@ public class HelpUtils {
                     {resources.getString(R.string.config_helpPackageNameKey)};
             String[] packageNameValue =
                     {resources.getString(R.string.config_helpPackageNameValue)};
-            String helpIntentExtraKey =
+            String intentExtraKey =
                     resources.getString(R.string.config_helpIntentExtraKey);
-            String helpIntentNameKey =
+            String intentNameKey =
                     resources.getString(R.string.config_helpIntentNameKey);
-            String feedbackIntentExtraKey =
-                    resources.getString(R.string.config_feedbackIntentExtraKey);
-            String feedbackIntentNameKey =
-                    resources.getString(R.string.config_feedbackIntentNameKey);
-            intent.putExtra(helpIntentExtraKey, packageNameKey);
-            intent.putExtra(helpIntentNameKey, packageNameValue);
-            intent.putExtra(feedbackIntentExtraKey, packageNameKey);
-            intent.putExtra(feedbackIntentNameKey, packageNameValue);
+            intent.putExtra(intentExtraKey, packageNameKey);
+            intent.putExtra(intentNameKey, packageNameValue);
         }
         intent.putExtra(EXTRA_THEME, 1 /* Light, dark action bar */);
         TypedArray array = context.obtainStyledAttributes(new int[]{android.R.attr.colorPrimary});
